@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="wl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="guide.css">
+<link rel="stylesheet" href="welcome.css">
 </head>
 <body>
 
@@ -27,36 +28,83 @@
     <h1 class="headline kw"><span data-ko="">방해받지 않는,<br>조용한 속초.</span><span data-en="">Undisturbed.<br>Quiet Sokcho.</span><span data-zh="">不被打扰的<br>宁静束草。</span></h1>
     <p class="hero-sub kw"><span data-ko="">프런트 없이, 휴대폰으로 체크인하는 숙소입니다.</span><span data-en="">No front desk — you check in on your phone.</span><span data-zh="">没有前台，用手机即可办理入住。</span></p>
 
-    <div class="three" aria-hidden="true">
-      <div><b>01</b><span data-ko="">비대면<br>체크인</span><span data-en="">Contactless<br>check-in</span><span data-zh="">非接触式<br>入住</span></div>
-      <div><b>02</b><span data-ko="">번호 하나로<br>입실</span><span data-en="">One code<br>to enter</span><span data-zh="">一组密码<br>入住</span></div>
-      <div><b>03</b><span data-ko="">조용한<br>개인 시간</span><span data-en="">Quiet<br>personal time</span><span data-zh="">安静的<br>私人时光</span></div>
+    <figure class="facade" style="margin-left:0;margin-right:0">
+      <div class="fa-grid" id="facade" aria-hidden="true"></div>
+      <figcaption class="fa-cap">
+        <span class="mono">47 Rooms</span>
+        <p class="kw"><span data-ko="">47개의 객실 중,<br>한 칸이 당신의 방입니다.</span><span data-en="">One of 47 rooms<br>is yours.</span><span data-zh="">47间客房，<br>其中一间属于您。</span></p>
+      </figcaption>
+    </figure>
+    <div class="tags">
+      <span class="tag"><span data-ko="">비대면 체크인</span><span data-en="">Contactless check-in</span><span data-zh="">非接触式入住</span></span>
+      <span class="tag"><span data-ko="">번호 하나로 입실</span><span data-en="">One code to enter</span><span data-zh="">一组密码入住</span></span>
+      <span class="tag"><span data-ko="">조용한 개인 시간</span><span data-en="">Quiet personal time</span><span data-zh="">安静的私人时光</span></span>
     </div>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="sec" aria-labelledby="know-t">
+  <section class="sec rv" aria-labelledby="know-t">
     <div class="mono sec-label">Before you arrive</div>
-    <h2 class="sec-title kw" id="know-t"><span data-ko="">도착 전 알아두실 네 가지</span><span data-en="">Four things before you arrive</span><span data-zh="">到达前请了解的四件事</span></h2>
-    <div class="chips">
-      <div class="chip"><span class="num">01</span><div class="kw"><span data-ko=""><strong>체크인 16:00 · 체크아웃 11:00.</strong> 체크인 당일 오전 10시 이전, 문자(또는 이메일)로 모바일 체크인 링크를 보내드립니다.</span><span data-en=""><strong>Check-in 4:00 PM · Check-out 11:00 AM.</strong> Before 10:00 AM on your check-in day, we send the mobile check-in link by text (or email).</span><span data-zh=""><strong>入住16:00 · 退房11:00。</strong>入住当天上午10点前，我们会通过短信（或邮件）发送手机入住链接。</span></div></div>
-      <div class="chip"><span class="num">02</span><div class="kw"><span data-ko=""><strong>주차는 문자로 안내합니다.</strong> 호텔에서 이용 가능 여부를 문자 메시지로 알려드립니다.</span><span data-en=""><strong>Parking is confirmed by text.</strong> The hotel will let you know about availability by text message.</span><span data-zh=""><strong>停车信息通过短信告知。</strong>酒店会通过短信告知您停车场是否可用。</span></div></div>
-      <div class="chip warn"><span class="num">03</span><div class="kw"><span data-ko=""><strong>전 구역 금연 · 반려동물 동반 불가.</strong> 미성년자 단독·혼숙 제한(보호자 동반 시 투숙 가능).</span><span data-en=""><strong>Non-smoking throughout · No pets.</strong> Minors staying alone or sharing a room are restricted (stay is possible with a guardian).</span><span data-zh=""><strong>全区域禁烟 · 不可携带宠物。</strong>未成年人单独入住及混住受限（有监护人陪同可入住）。</span></div></div>
-      <div class="chip"><span class="num">04</span><div class="kw"><span data-ko=""><strong>일회용 칫솔·면도기·빗·충전기는 제공되지 않습니다.</strong> 환경정책에 따라 미리 챙겨 오세요.</span><span data-en=""><strong>Disposable toothbrushes, razors, combs and chargers are not provided.</strong> Please bring your own.</span><span data-zh=""><strong>不提供一次性牙刷、剃须刀、梳子和充电器。</strong>根据环保政策，请自行携带。</span></div></div>
+    <h2 class="sec-title kw" id="know-t"><span data-ko="">도착 전 알아두실<br>네 가지</span><span data-en="">Four things before<br>you arrive</span><span data-zh="">到达前请了解的<br>四件事</span></h2>
+
+    <div class="big-time">
+      <div class="tc"><span class="tc-label"><span data-ko="">체크인</span><span data-en="">Check-in</span><span data-zh="">入住</span></span><div class="tc-time">16:00</div><div class="tc-note"><span data-ko="">오후 4시 이후</span><span data-en="">From 4:00 PM</span><span data-zh="">下午4点起</span></div></div>
+      <div class="tc"><span class="tc-label"><span data-ko="">체크아웃</span><span data-en="">Check-out</span><span data-zh="">退房</span></span><div class="tc-time">11:00</div><div class="tc-note"><span data-ko="">오전 11시까지</span><span data-en="">By 11:00 AM</span><span data-zh="">上午11点前</span></div></div>
+    </div>
+
+    <div class="blk dark">
+      <span class="no">01</span>
+      <h3 class="kw"><span data-ko="">링크는 체크인 당일 아침에 도착합니다</span><span data-en="">Your link arrives on the morning of check-in</span><span data-zh="">入住当天早晨将收到链接</span></h3>
+      <p class="kw"><span data-ko=""><strong>체크인 당일 오전 10시 이전</strong>, 문자(또는 이메일)로 모바일 체크인 링크를 보내드립니다.</span><span data-en=""><strong>Before 10:00 AM on your check-in day</strong>, we send the mobile check-in link by text (or email).</span><span data-zh=""><strong>入住当天上午10点前</strong>，我们会通过短信（或邮件）发送手机入住链接。</span></p>
+    </div>
+
+    <div class="blk">
+      <div class="blk-row">
+        <span class="pglyph" aria-hidden="true">P</span>
+        <div>
+          <span class="no">02</span>
+          <h3 class="kw"><span data-ko="">주차는 문자로 안내합니다</span><span data-en="">Parking is confirmed by text</span><span data-zh="">停车信息通过短信告知</span></h3>
+          <p class="kw"><span data-ko="">호텔에서 이용 가능 여부를 문자 메시지로 알려드립니다.</span><span data-en="">The hotel will let you know about availability by text message.</span><span data-zh="">酒店会通过短信告知您停车场是否可用。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="blk warm">
+      <span class="no">03</span>
+      <div class="pills">
+        <span class="pill"><span data-ko="">전 구역 금연</span><span data-en="">No smoking</span><span data-zh="">全区域禁烟</span></span>
+        <span class="pill"><span data-ko="">반려동물 동반 불가</span><span data-en="">No pets</span><span data-zh="">不可携带宠物</span></span>
+        <span class="pill"><span data-ko="">미성년자 제한</span><span data-en="">Minors restricted</span><span data-zh="">未成年人受限</span></span>
+      </div>
+      <p class="kw"><span data-ko="">미성년자 단독·혼숙 제한(보호자 동반 시 투숙 가능).</span><span data-en="">Minors staying alone or sharing a room are restricted (stay is possible with a guardian).</span><span data-zh="">未成年人单独入住及混住受限（有监护人陪同可入住）。</span></p>
+    </div>
+
+    <div class="blk">
+      <span class="no">04</span>
+      <h3 class="kw"><span data-ko="">이것만 챙겨 오세요</span><span data-en="">Please bring these</span><span data-zh="">请自备以下物品</span></h3>
+      <div class="bring">
+        <span><span data-ko="">칫솔</span><span data-en="">Toothbrush</span><span data-zh="">牙刷</span></span>
+        <span><span data-ko="">면도기</span><span data-en="">Razor</span><span data-zh="">剃须刀</span></span>
+        <span><span data-ko="">빗</span><span data-en="">Comb</span><span data-zh="">梳子</span></span>
+        <span><span data-ko="">충전기</span><span data-en="">Charger</span><span data-zh="">充电器</span></span>
+      </div>
+      <p class="kw"><span data-ko="">환경정책에 따라 일회용 칫솔·면도기·빗·충전기는 제공되지 않습니다.</span><span data-en="">Disposable toothbrushes, razors, combs and chargers are not provided.</span><span data-zh="">根据环保政策，不提供一次性牙刷、剃须刀、梳子和充电器。</span></p>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="loc-t">
+  <section class="sec rv" aria-labelledby="loc-t">
     <div class="mono sec-label">Location</div>
     <h2 class="sec-title kw" id="loc-t"><span data-ko="">오시는 길</span><span data-en="">Getting here</span><span data-zh="">交通指引</span></h2>
-    <div class="addr-ko">강원특별자치도 속초시 동해대로 4027</div>
-    <div class="addr-en">4027 Donghae-daero, Sokcho-si, Gangwon State, Korea</div>
-    <div class="nav-bub kw">
-      <span data-ko="">네비게이션에 <strong>「호텔어라운드 속초」</strong>로<br>검색하시면 정확히 찾아오실 수 있습니다.</span>
-      <span data-en="">Search <strong>"Hotel Around Sokcho"</strong><br>in your navigation app to find us.</span>
-      <span data-zh="">请在导航软件中搜索 <strong>"Hotel Around Sokcho"</strong><br>即可准确找到我们。</span>
+    <div class="addr-card">
+      <div class="addr-ko kw">강원특별자치도<br>속초시 동해대로 4027</div>
+      <div class="addr-en">4027 Donghae-daero, Sokcho-si, Gangwon State, Korea</div>
+      <div class="nav-bub kw">
+        <span data-ko="">네비게이션에 <strong>「호텔어라운드 속초」</strong>로<br>검색하시면 정확히 찾아오실 수 있습니다.</span>
+        <span data-en="">Search <strong>"Hotel Around Sokcho"</strong><br>in your navigation app to find us.</span>
+        <span data-zh="">请在导航软件中搜索 <strong>"Hotel Around Sokcho"</strong><br>即可准确找到我们。</span>
+      </div>
     </div>
     <div class="warn-badge">
       <div class="wb-title"><span data-ko="">도착 시 혼동 주의</span><span data-en="">Arrival notice</span><span data-zh="">到达提示</span></div>
@@ -68,17 +116,23 @@
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="map-t">
+  <section class="sec rv" aria-labelledby="map-t">
     <div class="mono sec-label">Local Map</div>
-    <h2 class="sec-title kw" id="map-t"><span data-ko="">여행 일정은 로컬지도로</span><span data-en="">Plan your trip with the Local Map</span><span data-zh="">用本地地图规划行程</span></h2>
+    <h2 class="sec-title kw" id="map-t"><span data-ko="">여행 일정은<br>로컬지도로</span><span data-en="">Plan your trip with<br>the Local Map</span><span data-zh="">用本地地图<br>规划行程</span></h2>
     <p class="sec-lead kw"><span data-ko="">체크인 전후 속초·양양·고성에서 가볼 만한 곳을 시간대별로 모아뒀습니다.</span><span data-en="">Places worth visiting around Sokcho, Yangyang and Goseong, before and after check-in.</span><span data-zh="">入住前后，束草·襄阳·高城值得一去的地方，按时间段为您整理好了。</span></p>
-    <a class="con-card hl" style="margin-top:16px" href="https://hotelaroundsokcho.github.io/sokcho-now/" target="_blank" rel="noopener">
+    <div class="phase" id="phase" aria-hidden="true">
+      <div class="p-dawn" data-p="dawn"><b><span data-ko="">새벽</span><span data-en="">Dawn</span><span data-zh="">黎明</span></b><small>04–08</small></div>
+      <div class="p-day" data-p="day"><b><span data-ko="">낮</span><span data-en="">Day</span><span data-zh="">白天</span></b><small>08–17</small></div>
+      <div class="p-dusk" data-p="dusk"><b><span data-ko="">일몰</span><span data-en="">Dusk</span><span data-zh="">日落</span></b><small>17–20</small></div>
+      <div class="p-night" data-p="night"><b><span data-ko="">밤</span><span data-en="">Night</span><span data-zh="">夜晚</span></b><small>20–04</small></div>
+    </div>
+    <a class="con-card hl" style="margin-top:12px" href="https://hotelaroundsokcho.github.io/sokcho-now/" target="_blank" rel="noopener">
       <div class="con-label"><span data-ko="">로컬지도</span><span data-en="">Local Map</span><span data-zh="">本地地图</span></div>
       <div class="con-val"><span data-ko="">지금 이 시간, 근처는 어떨까요</span><span data-en="">What's nearby, right now</span><span data-zh="">现在，附近有什么</span></div>
     </a>
   </section>
 
-  <section class="sec" aria-labelledby="con-t">
+  <section class="sec rv" aria-labelledby="con-t">
     <div class="mono sec-label">Contact</div>
     <h2 class="sec-title kw" id="con-t"><span data-ko="">문의</span><span data-en="">Contact us</span><span data-zh="">咨询</span></h2>
     <p class="con-hours"><span data-ko="">운영시간 09:00 – 20:00 (매일)</span><span data-en="">Hours: 09:00 – 20:00 (Daily)</span><span data-zh="">营业时间 09:00 – 20:00（每日）</span></p>
@@ -103,5 +157,35 @@
 </div>
 
 <script src="guide.js"></script>
+<script>
+/* 47칸 입면: 한 칸이 켜진다 / 현재 시간대 표시 / 스크롤 등장 */
+(function(){
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(e){}
+  var g = document.getElementById('facade');
+  if(g){
+    var lit = 14 + Math.floor(Math.random() * 20);
+    for(var i = 0; i < 47; i++){
+      var c = document.createElement('i');
+      if(i === lit){ c.className = reduce ? 'on' : 'on pre'; }
+      g.appendChild(c);
+    }
+    if(!reduce){ setTimeout(function(){ var el = g.querySelector('.pre'); if(el) el.classList.remove('pre'); }, 700); }
+  }
+  function markPhase(){
+    var p = document.documentElement.getAttribute('data-time');
+    document.querySelectorAll('#phase [data-p]').forEach(function(d){ d.classList.toggle('now', d.getAttribute('data-p') === p); });
+  }
+  markPhase(); setInterval(markPhase, 60000);
+  try {
+    var els = document.querySelectorAll('.rv');
+    if(!reduce && 'IntersectionObserver' in window){
+      document.documentElement.classList.add('js');
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.08});
+      els.forEach(function(el){ io.observe(el); });
+    }
+  } catch(e){ document.documentElement.classList.remove('js'); }
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+/* welcome.html 전용 (guide.css 뒤에 로드). index.html(B)에는 영향 없음 */
+
+/* 히어로: 더 크고 가는 제목 */
+.wl .hero{padding-bottom:30px;}
+.wl .headline{font-size:clamp(38px,11.4vw,54px);font-weight:200;line-height:1.14;letter-spacing:-.035em;}
+.wl body.zh .headline{font-weight:300;}
+.wl .hero-sub{margin-top:16px;max-width:22em;}
+
+/* 시그니처: 47칸 입면 */
+.facade{background:var(--band);border-radius:22px;padding:22px 20px 18px;margin-top:30px;box-shadow:0 26px 34px -22px rgba(10,24,36,.6);}
+.fa-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;}
+.fa-grid i{display:block;height:26px;border-radius:5px 5px 3px 3px;background:rgba(255,255,255,.09);transition:background-color 1s ease,box-shadow 1s ease;}
+.fa-grid i.on{background:var(--amber);box-shadow:0 0 18px 2px rgba(233,181,101,.5);animation:breathe 4.8s ease-in-out 1.2s infinite;}
+.fa-grid i.on.pre{background:rgba(255,255,255,.09);box-shadow:none;animation:none;}
+.fa-cap{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:18px;color:var(--band-soft);}
+.fa-cap .mono{color:var(--amber);flex-shrink:0;}
+.fa-cap p{font-size:13.5px;line-height:1.6;text-align:right;color:var(--band-ink);}
+@keyframes breathe{0%,100%{box-shadow:0 0 12px 1px rgba(233,181,101,.35)}50%{box-shadow:0 0 24px 5px rgba(233,181,101,.6)}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.tag{font-size:12.5px;font-weight:500;padding:7px 14px;border-radius:20px;background:var(--paper);color:var(--ink-soft);}
+
+/* 안내 블록: 서로 다른 모양 */
+.blk{background:var(--paper);border-radius:var(--r);padding:20px 20px 18px;margin-top:12px;}
+.blk .no{font:300 13px var(--f-mono);letter-spacing:.14em;color:var(--numeral);margin-bottom:10px;display:block;}
+.blk h3{font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.45;margin-bottom:6px;}
+.blk p{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+.blk strong{color:var(--ink);font-weight:600;}
+.blk.dark{background:var(--band);color:var(--band-ink);}
+.blk.dark .no{color:var(--amber);}
+.blk.dark p{color:var(--band-soft);}
+.blk.dark strong{color:var(--band-ink);}
+.blk.warm{background:var(--alert-bg);border:1px solid var(--alert-line);}
+.blk.warm .no{color:var(--alert);}
+.blk.warm p{color:var(--ink);}
+.blk-row{display:flex;gap:16px;align-items:flex-start;}
+.pglyph{flex-shrink:0;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--amber);color:var(--on-amber);font:600 22px var(--f-mono);}
+.big-time{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;}
+.big-time .tc{margin:0;}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 12px;}
+.pill{font-size:13px;font-weight:700;padding:7px 14px;border-radius:20px;border:1px solid var(--alert-line);color:var(--alert);background:transparent;}
+.bring{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 10px;}
+.bring span{font:500 13px var(--f-sans);padding:7px 14px;border-radius:12px;background:var(--paper2);color:var(--ink);}
+
+/* 오시는 길: 네이비 밴드 */
+.addr-card{background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:26px 20px 20px;margin-top:20px;}
+.addr-card .addr-ko{font-size:25px;font-weight:300;line-height:1.4;margin:0 0 6px;color:var(--band-ink);}
+.addr-card .addr-en{color:var(--band-soft);margin-bottom:18px;}
+.addr-card .nav-bub{background:rgba(255,255,255,.07);color:var(--band-soft);margin:0;}
+.addr-card .nav-bub strong{color:var(--band-ink);}
+.wl .warn-badge{margin-top:12px;}
+
+/* 로컬지도: 시간대 띠 */
+.phase{display:flex;gap:4px;margin-top:22px;border-radius:14px;overflow:hidden;}
+.phase div{padding:16px 8px 12px;position:relative;min-width:0;}
+.phase b{display:block;font-size:13px;font-weight:600;line-height:1.3;}
+.phase small{display:block;font:500 10px var(--f-mono);letter-spacing:.06em;margin-top:4px;opacity:.8;}
+.phase .p-dawn{flex:4;background:#D4D2E8;color:#232A4A;}
+.phase .p-day{flex:9;background:#D5DFE5;color:#203341;}
+.phase .p-dusk{flex:3;background:#E3CFD6;color:#2C2438;}
+.phase .p-night{flex:8;background:#15222F;color:#E8EDF1;}
+.phase .now{box-shadow:inset 0 0 0 2px var(--amber);}
+.phase .now::after{content:"NOW";position:absolute;top:6px;right:6px;font:700 8px var(--f-mono);letter-spacing:.1em;background:var(--amber);color:var(--on-amber);padding:2px 5px;border-radius:8px;}
+
+/* 등장 */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+.js .rv.in{opacity:1;transform:none;}
+
+@media(prefers-reduced-motion:reduce){
+  .fa-grid i.on{animation:none;}
+  .fa-grid i{transition:none;}
+  .js .rv{opacity:1;transform:none;transition:none;}
+}
