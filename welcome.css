@@ -78,3 +78,35 @@
   .kp-disp i,.kp-keys b{transition:none;}
   .js .rv{opacity:1;transform:none;transition:none;}
 }
+
+/* 모바일 가독성: 글자 크기 상향 (welcome 전용) */
+.wl body{font-size:17px;}
+.wl .mono{font-size:12px;}
+.wl .lpill{font-size:12.5px;padding:6px 14px;}
+.wl .status-bar{font-size:14px;}
+.wl .brand b{font-size:17px;}
+.wl .hero-sub{font-size:17.5px;}
+.wl .sec-title{font-size:30px;}
+.wl .sec-lead{font-size:16.5px;}
+.wl .tc-label{font-size:15px;}
+.wl .tc-note{font-size:15px;}
+.wl .time-note{font-size:16px;line-height:1.7;}
+.wl .blk .no{font-size:14px;}
+.wl .blk h3{font-size:20px;}
+.wl .blk p{font-size:16px;}
+.wl .pill{font-size:14.5px;}
+.wl .bring span{font-size:15px;}
+.wl .tag{font-size:14.5px;}
+.wl .ls-cap{font-size:16px;}
+.wl .kp-foot{font-size:11px;}
+.wl .addr-card .addr-ko{font-size:26px;}
+.wl .addr-en{font-size:14px;}
+.wl .nav-bub{font-size:16px;line-height:1.85;}
+.wl .phase b{font-size:15px;}
+.wl .phase small{font-size:11px;}
+.wl .con-hours{font-size:14px;}
+.wl .con-label{font-size:14px;}
+.wl .con-val{font-size:16px;}
+.wl .badge{font-size:12px;}
+.wl footer{font-size:12.5px;}
+.wl .fab{font-size:14.5px;}
