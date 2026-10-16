@@ -7,8 +7,8 @@
 .wl .hero-sub{margin-top:16px;max-width:22em;}
 
 /* 시그니처: 객실 창가의 도어락 */
-.lockscene{position:relative;margin-top:30px;height:392px;}
-.ls-view{position:absolute;left:0;right:34px;top:0;height:270px;border-radius:20px;background:linear-gradient(180deg,#CFD9DF 0%,#B9C8D1 58%,#9FB2BE 100%);overflow:hidden;}
+.lockscene{position:relative;margin-top:30px;}
+.ls-view{position:relative;margin-right:34px;height:270px;border-radius:20px;background:linear-gradient(180deg,#CFD9DF 0%,#B9C8D1 58%,#9FB2BE 100%);overflow:hidden;}
 .ls-view::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(180deg,rgba(32,51,65,.10),rgba(32,51,65,.28));}
 [data-time="dawn"] .ls-view{background:linear-gradient(180deg,#D4D2E8 0%,#C7C6DC 55%,#A9B4C6 100%);}
 [data-time="dusk"] .ls-view{background:linear-gradient(180deg,#E3CFD6 0%,#D2B7C4 55%,#8F8FA6 100%);}
@@ -22,7 +22,7 @@
 .kp-keys b.hot{background:var(--amber);color:var(--on-amber);}
 .kp-keys b.press{transform:scale(.88);}
 .kp-foot{display:flex;justify-content:space-between;margin-top:10px;font:400 10px var(--f-mono);letter-spacing:.08em;color:var(--band-soft);}
-.ls-cap{position:absolute;left:0;top:346px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+.ls-cap{position:static;display:block;margin-top:64px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
 .tag{font-size:12.5px;font-weight:500;padding:7px 14px;border-radius:20px;background:var(--paper);color:var(--ink-soft);}
 
