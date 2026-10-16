@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#E6EAED">
+<title>호텔어라운드 속초 · 예약 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+
+<div class="lang-bar">
+  <button class="lpill on" onclick="setLang('ko')">한국어</button>
+  <button class="lpill" onclick="setLang('en')">English</button>
+  <button class="lpill" onclick="setLang('zh')">中文</button>
+</div>
+<div class="status-bar" id="statusBar"><span class="status-dot"></span><span id="statusText"></span></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="mono">Hotel Around Sokcho</span><b>호텔어라운드 속초</b></div>
+    <div class="eyebrow mono"><span data-ko="">Welcome · 예약 안내</span><span data-en="">Welcome · Your booking</span><span data-zh="">Welcome · 预订须知</span></div>
+    <h1 class="headline kw"><span data-ko="">방해받지 않는,<br>조용한 속초.</span><span data-en="">Undisturbed.<br>Quiet Sokcho.</span><span data-zh="">不被打扰的<br>宁静束草。</span></h1>
+    <p class="hero-sub kw"><span data-ko="">프런트 없이, 휴대폰으로 체크인하는 숙소입니다.</span><span data-en="">No front desk — you check in on your phone.</span><span data-zh="">没有前台，用手机即可办理入住。</span></p>
+
+    <div class="three" aria-hidden="true">
+      <div><b>01</b><span data-ko="">비대면<br>체크인</span><span data-en="">Contactless<br>check-in</span><span data-zh="">非接触式<br>入住</span></div>
+      <div><b>02</b><span data-ko="">번호 하나로<br>입실</span><span data-en="">One code<br>to enter</span><span data-zh="">一组密码<br>入住</span></div>
+      <div><b>03</b><span data-ko="">조용한<br>개인 시간</span><span data-en="">Quiet<br>personal time</span><span data-zh="">安静的<br>私人时光</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="sec" aria-labelledby="know-t">
+    <div class="mono sec-label">Before you arrive</div>
+    <h2 class="sec-title kw" id="know-t"><span data-ko="">도착 전 알아두실 네 가지</span><span data-en="">Four things before you arrive</span><span data-zh="">到达前请了解的四件事</span></h2>
+    <div class="chips">
+      <div class="chip"><span class="num">01</span><div class="kw"><span data-ko=""><strong>체크인 16:00 · 체크아웃 11:00.</strong> 체크인 당일 오전 10시 이전, 문자(또는 이메일)로 모바일 체크인 링크를 보내드립니다.</span><span data-en=""><strong>Check-in 4:00 PM · Check-out 11:00 AM.</strong> Before 10:00 AM on your check-in day, we send the mobile check-in link by text (or email).</span><span data-zh=""><strong>入住16:00 · 退房11:00。</strong>入住当天上午10点前，我们会通过短信（或邮件）发送手机入住链接。</span></div></div>
+      <div class="chip"><span class="num">02</span><div class="kw"><span data-ko=""><strong>주차는 문자로 안내합니다.</strong> 호텔에서 이용 가능 여부를 문자 메시지로 알려드립니다.</span><span data-en=""><strong>Parking is confirmed by text.</strong> The hotel will let you know about availability by text message.</span><span data-zh=""><strong>停车信息通过短信告知。</strong>酒店会通过短信告知您停车场是否可用。</span></div></div>
+      <div class="chip warn"><span class="num">03</span><div class="kw"><span data-ko=""><strong>전 구역 금연 · 반려동물 동반 불가.</strong> 미성년자 단독·혼숙 제한(보호자 동반 시 투숙 가능).</span><span data-en=""><strong>Non-smoking throughout · No pets.</strong> Minors staying alone or sharing a room are restricted (stay is possible with a guardian).</span><span data-zh=""><strong>全区域禁烟 · 不可携带宠物。</strong>未成年人单独入住及混住受限（有监护人陪同可入住）。</span></div></div>
+      <div class="chip"><span class="num">04</span><div class="kw"><span data-ko=""><strong>일회용 칫솔·면도기·빗·충전기는 제공되지 않습니다.</strong> 환경정책에 따라 미리 챙겨 오세요.</span><span data-en=""><strong>Disposable toothbrushes, razors, combs and chargers are not provided.</strong> Please bring your own.</span><span data-zh=""><strong>不提供一次性牙刷、剃须刀、梳子和充电器。</strong>根据环保政策，请自行携带。</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="loc-t">
+    <div class="mono sec-label">Location</div>
+    <h2 class="sec-title kw" id="loc-t"><span data-ko="">오시는 길</span><span data-en="">Getting here</span><span data-zh="">交通指引</span></h2>
+    <div class="addr-ko">강원특별자치도 속초시 동해대로 4027</div>
+    <div class="addr-en">4027 Donghae-daero, Sokcho-si, Gangwon State, Korea</div>
+    <div class="nav-bub kw">
+      <span data-ko="">네비게이션에 <strong>「호텔어라운드 속초」</strong>로<br>검색하시면 정확히 찾아오실 수 있습니다.</span>
+      <span data-en="">Search <strong>"Hotel Around Sokcho"</strong><br>in your navigation app to find us.</span>
+      <span data-zh="">请在导航软件中搜索 <strong>"Hotel Around Sokcho"</strong><br>即可准确找到我们。</span>
+    </div>
+    <div class="warn-badge">
+      <div class="wb-title"><span data-ko="">도착 시 혼동 주의</span><span data-en="">Arrival notice</span><span data-zh="">到达提示</span></div>
+      <div class="wb-body kw">
+        <span data-ko="">도착 시 <strong>마리비스타빌딩(마리비스타호텔)</strong> 건물로 안내됩니다.<br><strong>표지판이 없어도</strong> 그대로 입장·입차하세요.</span>
+        <span data-en="">You may be directed to <strong>Marivista Building (Marivista Hotel)</strong> — this is the same building.<br>No signage? No problem — just drive right in.</span>
+        <span data-zh="">到达时可能会被引导至<strong>玛丽维斯塔大厦(玛丽维斯塔酒店)</strong>，这其实是同一栋建筑。<br>即使没有指示牌，也请直接进入。</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="map-t">
+    <div class="mono sec-label">Local Map</div>
+    <h2 class="sec-title kw" id="map-t"><span data-ko="">여행 일정은 로컬지도로</span><span data-en="">Plan your trip with the Local Map</span><span data-zh="">用本地地图规划行程</span></h2>
+    <p class="sec-lead kw"><span data-ko="">체크인 전후 속초·양양·고성에서 가볼 만한 곳을 시간대별로 모아뒀습니다.</span><span data-en="">Places worth visiting around Sokcho, Yangyang and Goseong, before and after check-in.</span><span data-zh="">入住前后，束草·襄阳·高城值得一去的地方，按时间段为您整理好了。</span></p>
+    <a class="con-card hl" style="margin-top:16px" href="https://hotelaroundsokcho.github.io/sokcho-now/" target="_blank" rel="noopener">
+      <div class="con-label"><span data-ko="">로컬지도</span><span data-en="">Local Map</span><span data-zh="">本地地图</span></div>
+      <div class="con-val"><span data-ko="">지금 이 시간, 근처는 어떨까요</span><span data-en="">What's nearby, right now</span><span data-zh="">现在，附近有什么</span></div>
+    </a>
+  </section>
+
+  <section class="sec" aria-labelledby="con-t">
+    <div class="mono sec-label">Contact</div>
+    <h2 class="sec-title kw" id="con-t"><span data-ko="">문의</span><span data-en="">Contact us</span><span data-zh="">咨询</span></h2>
+    <p class="con-hours"><span data-ko="">운영시간 09:00 – 20:00 (매일)</span><span data-en="">Hours: 09:00 – 20:00 (Daily)</span><span data-zh="">营业时间 09:00 – 20:00（每日）</span></p>
+    <div class="con-grid">
+      <a class="con-card hl" href="https://hotel-around-sokcho-chatbot-frontend.pages.dev" target="_blank" rel="noopener">
+        <div class="con-label"><span data-ko="">AI 챗봇</span><span data-en="">AI Chatbot</span><span data-zh="">AI聊天机器人</span><span class="badge"><span data-ko="">추천</span><span data-en="">Best</span><span data-zh="">推荐</span></span></div>
+        <div class="con-val"><span data-ko="">실시간 채팅 · 즉시 답변</span><span data-en="">Live chat · Instant answers</span><span data-zh="">实时聊天 · 即时回复</span></div>
+      </a>
+      <a class="con-card" href="tel:033-800-8899"><div class="con-label"><span data-ko="">전화</span><span data-en="">Phone</span><span data-zh="">电话</span></div><div class="con-val">033-800-8899</div></a>
+      <a class="con-card" href="https://open.kakao.com/o/shUYSeFi" target="_blank" rel="noopener"><div class="con-label">KakaoTalk</div><div class="con-val"><span data-ko="">1:1 채팅 상담</span><span data-en="">1:1 chat</span><span data-zh="">1:1在线咨询</span></div></a>
+      <a class="con-card" href="https://wa.me/821042820392" target="_blank" rel="noopener"><div class="con-label">WhatsApp</div><div class="con-val">+82-10-4282-0392</div></a>
+      <a class="con-card" href="mailto:hotelaroundsokcho@gmail.com"><div class="con-label">Email</div><div class="con-val">hotelaroundsokcho@gmail.com</div></a>
+    </div>
+    <p class="sec-lead kw" style="margin-top:22px"><span data-ko="">체크인 당일에는 모바일 체크인 링크가 포함된 이용안내를 문자로 보내드립니다.</span><span data-en="">On your check-in day, we’ll text you the guide with your mobile check-in link.</span><span data-zh="">入住当天，我们会通过短信发送包含手机入住链接的入住指南。</span></p>
+  </section>
+</main>
+
+<footer>Hotel Around Sokcho</footer>
+
+<div class="fab-wrap">
+  <a class="fab kakao" href="https://open.kakao.com/o/shUYSeFi" target="_blank" rel="noopener"><span data-ko="">1:1 문의</span><span data-en="">Chat</span><span data-zh="">咨询</span></a>
+</div>
+
+<script src="guide.js"></script>
+</body>
+</html>
