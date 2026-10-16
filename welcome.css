@@ -37,6 +37,7 @@
 .big-time{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:22px;}
 .big-time .tc{margin:0;min-width:0;padding:20px 16px 18px;}
 .big-time .tc-time{font-size:clamp(34px,10.4vw,52px);letter-spacing:-.05em;white-space:nowrap;}
+.time-note{font-size:13.5px;line-height:1.7;color:var(--ink-soft);margin:12px 4px 4px;}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 12px;}
 .pill{font-size:13px;font-weight:700;padding:7px 14px;border-radius:20px;border:1px solid var(--alert-line);color:var(--alert);background:transparent;}
 .bring{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 10px;}
