@@ -28,12 +28,14 @@
     <h1 class="headline kw"><span data-ko="">방해받지 않는,<br>조용한 속초.</span><span data-en="">Undisturbed.<br>Quiet Sokcho.</span><span data-zh="">不被打扰的<br>宁静束草。</span></h1>
     <p class="hero-sub kw"><span data-ko="">프런트 없이, 휴대폰으로 체크인하는 숙소입니다.</span><span data-en="">No front desk — you check in on your phone.</span><span data-zh="">没有前台，用手机即可办理入住。</span></p>
 
-    <figure class="facade" style="margin-left:0;margin-right:0">
-      <div class="fa-grid" id="facade" aria-hidden="true"></div>
-      <figcaption class="fa-cap">
-        <span class="mono">47 Rooms</span>
-        <p class="kw"><span data-ko="">47개의 객실 중,<br>한 칸이 당신의 방입니다.</span><span data-en="">One of 47 rooms<br>is yours.</span><span data-zh="">47间客房，<br>其中一间属于您。</span></p>
-      </figcaption>
+    <figure class="lockscene" style="margin-left:0;margin-right:0">
+      <div class="ls-view" aria-hidden="true"></div>
+      <div class="keypad" aria-hidden="true">
+        <div class="kp-disp"><i>7</i><i>3</i><i>1</i><i>9</i></div>
+        <div class="kp-keys"><b class="hot">1</b><b>2</b><b class="hot">3</b><b>4</b><b>5</b><b>6</b><b class="hot">7</b><b>8</b><b class="hot">9</b><b>*</b><b>0</b><b>#</b></div>
+        <div class="kp-foot"><span data-ko="">예시 번호</span><span data-en="">Sample code</span><span data-zh="">示例密码</span><span data-ko="">열림</span><span data-en="">Open</span><span data-zh="">已开锁</span></div>
+      </div>
+      <figcaption class="ls-cap kw"><span data-ko="">47개의 객실 중,<br>한 칸이 당신의 방입니다.</span><span data-en="">One of 47 rooms<br>is yours.</span><span data-zh="">47间客房，<br>其中一间属于您。</span></figcaption>
     </figure>
     <div class="tags">
       <span class="tag"><span data-ko="">비대면 체크인</span><span data-en="">Contactless check-in</span><span data-zh="">非接触式入住</span></span>
@@ -154,15 +156,18 @@
 (function(){
   var reduce = false;
   try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(e){}
-  var g = document.getElementById('facade');
-  if(g){
-    var lit = (1 + Math.floor(Math.random() * 2)) * 12 + 2 + Math.floor(Math.random() * 8);
-    for(var i = 0; i < 47; i++){
-      var c = document.createElement('i');
-      if(i === lit){ c.className = reduce ? 'on' : 'on pre'; }
-      g.appendChild(c);
+  var ds = document.querySelectorAll('.kp-disp i'), ks = document.querySelectorAll('.kp-keys b.hot');
+  if(ds.length){
+    if(reduce){ ds.forEach(function(d){ d.classList.add('on'); }); }
+    else {
+      var step = 0;
+      (function tick(){
+        ds.forEach(function(d, i){ d.classList.toggle('on', i < step); });
+        ks.forEach(function(k, i){ k.classList.toggle('press', i === step - 1); });
+        step = (step + 1) % 6;
+        setTimeout(tick, step === 0 ? 2400 : 650);
+      })();
     }
-    if(!reduce){ setTimeout(function(){ var el = g.querySelector('.pre'); if(el) el.classList.remove('pre'); }, 700); }
   }
   function markPhase(){
     var p = document.documentElement.getAttribute('data-time');

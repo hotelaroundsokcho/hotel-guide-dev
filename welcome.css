@@ -6,16 +6,23 @@
 .wl body.zh .headline{font-weight:300;}
 .wl .hero-sub{margin-top:16px;max-width:22em;}
 
-/* 시그니처: 47칸 입면 */
-.facade{background:var(--band);border-radius:22px;padding:22px 20px 18px;margin-top:30px;box-shadow:0 26px 34px -22px rgba(10,24,36,.6);}
-.fa-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;}
-.fa-grid i{display:block;height:26px;border-radius:5px 5px 3px 3px;background:rgba(255,255,255,.09);transition:background-color 1s ease,box-shadow 1s ease;}
-.fa-grid i.on{background:var(--amber);box-shadow:0 0 18px 2px rgba(233,181,101,.5);animation:breathe 4.8s ease-in-out 1.2s infinite;}
-.fa-grid i.on.pre{background:rgba(255,255,255,.09);box-shadow:none;animation:none;}
-.fa-cap{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:18px;color:var(--band-soft);}
-.fa-cap .mono{color:var(--amber);flex-shrink:0;}
-.fa-cap p{font-size:13.5px;line-height:1.6;text-align:right;color:var(--band-ink);}
-@keyframes breathe{0%,100%{box-shadow:0 0 12px 1px rgba(233,181,101,.35)}50%{box-shadow:0 0 24px 5px rgba(233,181,101,.6)}}
+/* 시그니처: 객실 창가의 도어락 */
+.lockscene{position:relative;margin-top:30px;height:330px;}
+.ls-view{position:absolute;left:0;right:34px;top:0;height:270px;border-radius:20px;background:linear-gradient(180deg,#CFD9DF 0%,#B9C8D1 58%,#9FB2BE 100%);overflow:hidden;}
+.ls-view::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(180deg,rgba(32,51,65,.10),rgba(32,51,65,.28));}
+[data-time="dawn"] .ls-view{background:linear-gradient(180deg,#D4D2E8 0%,#C7C6DC 55%,#A9B4C6 100%);}
+[data-time="dusk"] .ls-view{background:linear-gradient(180deg,#E3CFD6 0%,#D2B7C4 55%,#8F8FA6 100%);}
+[data-time="night"] .ls-view{background:linear-gradient(180deg,#15222F 0%,#1D3042 60%,#2B4559 100%);}
+.keypad{position:absolute;right:0;bottom:0;width:176px;background:var(--band);border-radius:20px;padding:14px 14px 12px;box-shadow:0 26px 34px -20px rgba(10,24,36,.65);}
+.kp-disp{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.kp-disp i{font:400 17px var(--f-mono);font-style:normal;text-align:center;padding:8px 0;border-radius:7px;background:rgba(0,0,0,.28);color:rgba(233,181,101,.18);transition:color .3s ease;}
+.kp-disp i.on{color:var(--amber);}
+.kp-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;}
+.kp-keys b{font:400 13px var(--f-mono);text-align:center;padding:9px 0;border-radius:7px;background:rgba(255,255,255,.1);color:var(--band-ink);transition:transform .15s ease,background-color .3s ease;}
+.kp-keys b.hot{background:var(--amber);color:var(--on-amber);}
+.kp-keys b.press{transform:scale(.88);}
+.kp-foot{display:flex;justify-content:space-between;margin-top:10px;font:400 10px var(--f-mono);letter-spacing:.08em;color:var(--band-soft);}
+.ls-cap{position:absolute;left:0;top:282px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
 .tag{font-size:12.5px;font-weight:500;padding:7px 14px;border-radius:20px;background:var(--paper);color:var(--ink-soft);}
 
@@ -68,7 +75,6 @@
 .js .rv.in{opacity:1;transform:none;}
 
 @media(prefers-reduced-motion:reduce){
-  .fa-grid i.on{animation:none;}
-  .fa-grid i{transition:none;}
+  .kp-disp i,.kp-keys b{transition:none;}
   .js .rv{opacity:1;transform:none;transition:none;}
 }
