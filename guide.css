@@ -1,6 +1,6 @@
 :root{
   --f-sans:'Pretendard Variable','Pretendard','Noto Sans KR','Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,-apple-system,sans-serif;
-  --f-mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  --f-mono:var(--f-sans);
   --r:20px; --rm:14px; --lb:42px;
   --w-display:300;
   --bg:#E6EAED; --sky:#D5DFE5; --paper:#F8F8F8; --paper2:#EEF1F3;
@@ -165,6 +165,10 @@ footer{padding:22px 16px 110px;text-align:center;font:500 11px var(--f-mono);let
 .fab-wrap{position:fixed;right:16px;bottom:18px;z-index:150;display:flex;flex-direction:column;gap:10px;align-items:flex-end;}
 .fab{display:flex;align-items:center;gap:8px;background:var(--band);color:var(--band-ink);border-radius:30px;padding:11px 16px;font-size:12.5px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(10,24,36,.28);border:1px solid rgba(255,255,255,.1);}
 .fab.kakao{background:#FEE500;color:#3A1D1D;border-color:transparent;}
+
+/* 폰트 통일: 숫자 폭 고정 + 하단 배치 카드 간격 */
+.tc-time,.steps .n,.chip .num,.three b,.kp-grid b,.kp-cap,.kp-disp i,.kp-keys b,.blk .no,.phase small{font-variant-numeric:tabular-nums;}
+.must.must-late{margin-top:46px;}
 
 @media(prefers-reduced-motion:reduce){
   .kp-screen i,.kp-grid b.hash{animation:none;}
