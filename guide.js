@@ -12,6 +12,7 @@ function setLang(lang){
     if(el.hasAttribute('data-zh')) el.style.display = (lang==='zh') ? '' : 'none';
   });
   document.documentElement.lang = lang;
+  document.querySelectorAll('a[data-base]').forEach(function(a){ a.href = a.getAttribute('data-base') + '?lang=' + lang; });
   updateStatus();
   try { localStorage.setItem('hg_lang', lang); } catch(e){}
 }
