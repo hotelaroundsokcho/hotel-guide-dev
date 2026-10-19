@@ -29,7 +29,7 @@
 
     <section class="must" aria-labelledby="must-t">
       <h2 id="must-t" class="kw"><span data-ko="">모바일 체크인을 마치면,<br>번호가 도착합니다.</span><span data-en="">Finish mobile check-in,<br>and your door code arrives.</span><span data-zh="">完成手机入住后，<br>门锁密码将发送给您。</span></h2>
-      <a class="btn" href="https://hotelaroundsokcho.github.io/hotel-checkin/checkin-dev.html" data-base="https://hotelaroundsokcho.github.io/hotel-checkin/checkin-dev.html" target="_blank" rel="noopener"><span><span data-ko="">모바일 체크인 하기</span><span data-en="">Start mobile check-in</span><span data-zh="">开始手机入住</span></span><span aria-hidden="true">→</span></a>
+      <a class="btn" id="checkinBtn" href="https://hotelaroundsokcho.github.io/hotel-checkin/" data-base="https://hotelaroundsokcho.github.io/hotel-checkin/" target="_blank" rel="noopener"><span><span data-ko="">모바일 체크인 하기</span><span data-en="">Start mobile check-in</span><span data-zh="">开始手机入住</span></span><span aria-hidden="true">→</span></a>
       <p class="note"><span data-ko="">모바일 체크인은 체크인 당일부터 가능합니다.</span><span data-en="">Mobile check-in is available from your check-in day.</span><span data-zh="">手机入住自入住当天起开放。</span></p>
     </section>
   </div>
@@ -166,6 +166,8 @@
   <a class="fab kakao" href="https://open.kakao.com/o/shUYSeFi" target="_blank" rel="noopener"><span data-ko="">1:1 문의</span><span data-en="">Chat</span><span data-zh="">咨询</span></a>
 </div>
 
+<script>/* 체크인 버튼 주소 자동 전환: DEV(hotel-guide-dev)·로컬 미리보기는 checkin-dev, 그 외(PROD)는 기존 체크인 주소 */
+(function(){var d=false;try{d=/hotel-guide-dev/i.test(location.pathname)||location.hostname==="localhost"||location.hostname==="127.0.0.1"||location.protocol==="file:";}catch(e){}if(!d)return;var a=document.getElementById("checkinBtn");if(!a)return;var u="https://hotelaroundsokcho.github.io/hotel-checkin/checkin-dev.html";a.setAttribute("data-base",u);a.setAttribute("href",u);})();</script>
 <script src="guide.js"></script>
 </body>
 </html>
